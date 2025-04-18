@@ -6,7 +6,7 @@ Interferometry involves combining the signals from multiple antennas (often spac
 
 ## Original File
 Below is a 
-![Original Recording](https://imgur.com/a/sBVO4UX)
+![Original Recording](https://github.com/ethanduhdurr/ECSE-351-GNURadio-Project/blob/main/Original%20Frequency%20Analysis.png)
 
 
 ## Final Thoughts
