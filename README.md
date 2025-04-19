@@ -22,7 +22,12 @@ Before adding additional antennas, I modified the sampling delay difference to o
 
 ## Adding Antennas
 Now that we've experimented with changing variables without altering the circuit, let's now add more antennas. As a control, I first added a third antenna, with a unique seed of 3 (every other variable is identical to antenna 1's model). The freqency analysis is below. 
+
 ![Third Antenna](https://github.com/ethanduhdurr/ECSE-351-GNURadio-Project/blob/main/Third%20Antenna%20Control%20Frequency%20Analysis.png)
+
+Upon analyzing the frequency plot, the individual signal from the third antenna showed similar characteristics to the existing ones, occupying the same frequency band and exhibiting the same constructive interference pattern shape. The summed interferometry signal (now a combination of three signals) displayed a slightly higher magnitude overall (-35dB to -32dB), but no significant changes were observed in the shape or structure of the interference pattern. This suggests that the addition of a third antenna reinforces the combined signal’s strength without significantly altering its spectral behavior, likely due to all antennas receiving fundamentally similar signals with modest phase offsets.
+
+
 
 ## Final Thoughts
 
