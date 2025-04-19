@@ -27,6 +27,12 @@ Now that we've experimented with changing variables without altering the circuit
 
 Upon analyzing the frequency plot, the individual signal from the third antenna showed similar characteristics to the existing ones, occupying the same frequency band and exhibiting the same constructive interference pattern shape. The summed interferometry signal (now a combination of three signals) displayed a slightly higher magnitude overall (-35dB to -32dB), but no significant changes were observed in the shape or structure of the interference pattern. This suggests that the addition of a third antenna reinforces the combined signal’s strength without significantly altering its spectral behavior, likely due to all antennas receiving fundamentally similar signals with modest phase offsets.
 
+To simulate more realistic signal environments, such as reflections and scattering, I introduced tap variations in the channel models of antenna 3.
+
+![Two Taps](https://github.com/ethanduhdurr/ECSE-351-GNURadio-Project/blob/main/Antenna%203_2Taps.png)
+
+Upon applying multiple taps to the third antenna's channel model, I observed that increasing the number of taps led to a noticeable increase in the signal magnitude within the passband for both the third antenna and the resulting interferometry signal (shown above, with taps=2). Interestingly, this increase in magnitude was largely confined to the signal’s active frequency range — outside the passband, antenna 3’s output remained consistent with antennas 1 and 2, showing no significant gain or deviation. This suggests that the multipath components introduced by additional taps are effectively reinforcing the desired signal frequencies, likely through constructive interference at those specific frequencies, while having minimal influence on noise or frequencies outside the transmission band. As a result, tap variation proved to be a meaningful way to simulate environmental complexity and selectively enhance the signal within its intended spectral region.
+
 
 
 ## Final Thoughts
