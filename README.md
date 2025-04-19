@@ -13,12 +13,16 @@ The receiver section consists of two antennas receiving the signal from the sink
 
 ## Original Data
 ![Original Specrum](https://github.com/ethanduhdurr/ECSE-351-GNURadio-Project/blob/main/Original%20Frequency%20Analysis.png)
-Above is the frequency analysis of the original circuit. The base signal is a cosine wave at 50 kHz. When visualized in the frequency domain using the frequency sink, the signal appears centered around 50 kHz and occupies a narrow band ranging from approximately 0 to 98 kHz (0 to 0.098 MHz) at a magnitude between -43dB and -40dB. This spectral range includes both the fundamental frequency and the immediate frequency components influenced by noise and processing blocks. Furthermore, the interferometry (summed) signal is greater in magnitude than both individual signals, so interference is constructive.
+Above is the frequency analysis of the original circuit. The base signal is a cosine wave at 50 kHz. When visualized in the frequency domain using the frequency sink, the signal appears centered around 50 kHz and occupies a narrow band ranging from approximately 0 to 98 kHz (0 to 0.098 MHz, or roughly the established bandwidth) at a magnitude between -43dB and -40dB. This spectral range includes both the fundamental frequency and the immediate frequency components influenced by noise and processing blocks. Furthermore, the interferometry (summed) signal is greater in magnitude than both individual signals, so interference is constructive.
 
 ## Modifying Delay
 Before adding additional antennas, I modified the sampling delay difference to observe changes in the frequency analysis. When introducing a delay of 10 samples between the two antennas, the frequency spectrum of the interferometric signal displayed a characteristic M-shape. This pattern indicates alternating constructive and destructive interference, with peaks at the edges of the frequency band and a dip near the center frequency. As the delay increased(delay_diff=30), the M-shape starts to take on more humps, varying betwen the different interferences under much smaller frequency intervals.
 ![10 Sample Delay](https://github.com/ethanduhdurr/ECSE-351-GNURadio-Project/blob/main/10%20Sample%20Delay%20Frequency%20Analysis.png)
 ![10 Sample Delay](https://github.com/ethanduhdurr/ECSE-351-GNURadio-Project/blob/main/30%20Sample%20Delay%20Frequency%20Analysis.png)
+
+## Adding Antennas
+Now that we've experimented with changing variables without altering the circuit, let's now add more antennas. As a control, I first added a third antenna, with a unique seed of 3 (every other variable is identical to antenna 1's model). The freqency analysis is below. 
+![Third Antenna](https://github.com/ethanduhdurr/ECSE-351-GNURadio-Project/blob/main/Third%20Antenna%20Control%20Frequency%20Analysis.png)
 
 ## Final Thoughts
 
